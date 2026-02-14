@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Valentine's Day ❤️</title>
+<style>
+body{
+    margin:0;
+    background:linear-gradient(to right,#ff4e50,#fc913a);
+    text-align:center;
+    font-family:Arial;
+    color:white;
+    overflow:hidden;
+}
+img{
+    width:250px;
+    border-radius:20px;
+}
+.confetti{
+    position:fixed;
+    width:10px;
+    height:10px;
+    background:white;
+    animation:fall 5s linear infinite;
+}
+@keyframes fall{
+    0%{transform:translateY(-10vh);}
+    100%{transform:translateY(100vh);}
+}
+</style>
+</head>
+<body>
+
+<h1>Happy Valentine’s Day My Love ❤️</h1>
+
+<img src="ourphoto.jpg">
+
+<p>
+You are my favourite person.  
+My safe place.  
+My forever.  
+I love you endlessly 💖
+</p>
+
+<script>
+function createConfetti(){
+    const c=document.createElement("div");
+    c.classList.add("confetti");
+    c.style.left=Math.random()*100+"vw";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5000);
+}
+setInterval(createConfetti,200);
+</script>
+
+</body>
+</html>
